@@ -22,6 +22,11 @@ namespace MultilingualWebApplication.Controllers
             // Add the page title to the ViewData object so that the Index.cshtml page can access it to display the translation
             // Description translation is retrieved directly on the Index.cshtml page
             ViewData["PageTitle"] = _stringLocalizer["page.title"].Value;
+            ViewData["Culture"] = _stringLocalizer["page.culture"].Value;
+            ViewData["UICulture"] = _stringLocalizer["page.uiculture"].Value;
+            ViewData["Date"] = _stringLocalizer["page.date"].Value;
+            ViewData["Currency"] = _stringLocalizer["page.currency"].Value;
+            ViewData["Number"] = _stringLocalizer["page.number"].Value;
 
             return View();
         }

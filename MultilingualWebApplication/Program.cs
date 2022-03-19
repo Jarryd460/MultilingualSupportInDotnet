@@ -22,10 +22,11 @@ builder.Services
         {
             new CultureInfo("de-DE"),
             new CultureInfo("en-US"),
+            new CultureInfo("en-ZA"),
             new CultureInfo("fr-FR")
         };
 
-        options.DefaultRequestCulture = new RequestCulture("en-US", "en-US");
+        options.DefaultRequestCulture = new RequestCulture("en-ZA", "en-ZA");
         options.SupportedCultures = supportedCultures;
         options.SupportedUICultures = supportedCultures;
 

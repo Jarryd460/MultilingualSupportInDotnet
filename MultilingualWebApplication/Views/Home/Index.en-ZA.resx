@@ -117,28 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="page.culture" xml:space="preserve">
-    <value>Culture</value>
-  </data>
-  <data name="page.currency" xml:space="preserve">
-    <value>Currency</value>
-  </data>
-  <data name="page.date" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="page.description" xml:space="preserve">
-    <value>This is the home page of the application</value>
-  </data>
-  <data name="page.multilingual" xml:space="preserve">
-    <value>&lt;i&gt;This is a multilingual supported application&lt;/i&gt;</value>
-  </data>
-  <data name="page.number" xml:space="preserve">
-    <value>Number</value>
-  </data>
-  <data name="page.title" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="page.uiculture" xml:space="preserve">
-    <value>UICulture</value>
+  <data name="view.breadcrumb.text" xml:space="preserve">
+    <value>Home - Index</value>
   </data>
 </root>
