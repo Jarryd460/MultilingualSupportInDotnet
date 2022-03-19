@@ -1,0 +1,44 @@
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.Extensions.Localization
+@using Microsoft.Extensions.Options
+@using MultilingualWebApplication.Controllers
+
+@{
+    var requestCultureFeature = Context.Features.Get<IRequestCultureFeature>();
+    var requestCulture = requestCultureFeature?.RequestCulture;
+}
+@inject IStringLocalizer<HomeController> localizer
+@inject IHtmlLocalizer<HomeController> htmlLocalizer
+@inject IViewLocalizer viewLocalizer
+
+<div class="text-center">
+    <h1 class="display-4">
+        @ViewData["PageTitle"]
+    </h1>
+    <p>
+        <!-- Instead of adding the translation to ViewData and accessing it here, like PageTitle does, 
+             we instead can inject the IStringLocalizer directory here and access the translation -->
+        @localizer["page.description"]
+    </p>
+    <p>
+        @htmlLocalizer["page.multilingual"]
+    </p>
+    <p>
+        @viewLocalizer["view.breadcrumb.text"]
+    </p>
+</div>
+
+<table class="table culture-table">
+    <tr>
+        <td>Culture</td>
+        <td>
+            @requestCulture.Culture.Name
+        </td>
+    </tr>
+    <tr>
+        <td>UICulture</td>
+        <td>@requestCulture.UICulture.Name</td>
+    </tr>
+</table>
